@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="myFunction()">Click</button>
+    <p id="myP"></p>
+    <script>
+        let eee = JSON.parse(localStorage.getItem('variable'));
+        document.getElementById('myP').innerHTML = eee
+        function myFunction() {
+            eee = eee + 1;
+            localStorage.setItem('variable', JSON.stringify(eee));
+            document.getElementById('myP').innerHTML = eee
+        }
+    </script>
+</body>
+</html>
